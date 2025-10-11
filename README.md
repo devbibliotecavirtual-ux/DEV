@@ -1,1 +1,0 @@
-Biblioteca Virtual, totalmente legal
