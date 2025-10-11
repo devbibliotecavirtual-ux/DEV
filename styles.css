@@ -1,0 +1,231 @@
+:root {
+  --color-fondo: #3B3535;
+  --color-acento: goldenrod;
+  --color-primario: #66D1ED;
+  --color-texto-claro: white;
+  --tamanio-fuente-titulo: 3rem;
+  --tamanio-fuente-subtitulo: 2rem;
+}
+
+body{
+    background-color: var(--color-fondo);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.topside {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    padding: 0 20px;
+}
+
+#titulo {
+    font-size: var(--tamanio-fuente-titulo);
+    color: var(--color-acento);
+}
+
+.buscador-contenedor {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.texto-buscador{
+    color: var(--color-texto-claro)
+}
+
+#buscador {
+    width: 400px;
+    padding: 10px;
+    font-size: 16px;
+    background-color: var(--color-primario);
+    border: none;
+}
+
+.bienvenida {
+    text-align: center;
+    padding-top: 50px;
+}
+
+.bienvenida h1 {
+    font-size: var(--tamanio-fuente-titulo);
+    color: var(--color-texto-claro);
+}
+
+.menu-navegacion {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: #2e2a2a; 
+    border-bottom: 2px solid var(--color-acento);
+    flex-wrap: wrap; 
+}
+
+.boton-navegacion {
+    background-color: transparent;
+    border: 2px solid var(--color-acento);
+    color: var(--color-acento);
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.boton-navegacion:hover {
+    background-color: var(--color-acento);
+    color: var(--color-fondo);
+}
+
+.contenedor-libros {
+    padding: 20px;
+}
+
+.genero {
+    margin-bottom: 40px;
+}
+
+.titulo-genero {
+    font-size: var(--tamanio-fuente-subtitulo);
+    color: var(--color-acento);
+    border-bottom: 2px solid var(--color-acento);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.lista-libros {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.libro-card {
+    background-color: #4A4444;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    color: var(--color-texto-claro);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.libro-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.libro-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.libro-card p {
+    font-size: 0.9rem;
+    color: #ccc;
+    margin-bottom: 10px;
+}
+
+.ver-pdf {
+    display: inline-block;
+    background-color: var(--color-acento);
+    color: var(--color-fondo);
+    padding: 8px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.ver-pdf:hover {
+    background-color: #e0ac00;
+}
+/* ====================================================== */
+/* UNIFORMIDAD DE PORTADAS (para arreglar tamaños variables)*/
+/* ====================================================== */
+
+.portada-contenedor {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.libro-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px; 
+}
+/* ====================================================== */
+/* MEDIA QUERIES - DISEÑO ADAPTABLE              */
+/* ====================================================== */
+
+/* 1. ESTILOS PARA TABLETAS Y PANTALLAS PEQUEÑAS (hasta 768px) */
+@media screen and (max-width: 768px) {
+    
+    /* Mostrar dos columnas en lugar de tres */
+    .lista-libros {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Reducir el padding y el gap de la navegación */
+    .menu-navegacion {
+        gap: 10px;
+        padding: 10px 5px;
+        flex-wrap: wrap; /* Permite que los botones se envuelvan si no caben */
+    }
+
+    /* Reducir el tamaño de la fuente en los botones */
+    .boton-navegacion {
+        padding: 8px 10px;
+        font-size: 0.9rem;
+    }
+    
+    /* Ajustar el buscador */
+    #buscador {
+        width: 250px; /* Reducir el ancho del input */
+    }
+}
+
+
+/* 2. ESTILOS PARA TELÉFONOS MÓVILES (hasta 576px) */
+@media screen and (max-width: 576px) {
+    
+    /* Encabezado: apilar el título y el buscador */
+    .topside {
+        flex-direction: column;
+        height: auto;
+        padding: 15px 10px;
+        align-items: flex-start; /* Alineación del título a la izquierda */
+    }
+    
+    /* El buscador usará todo el ancho disponible */
+    .buscador-contenedor {
+        width: 100%;
+        margin-top: 10px;
+    }
+    
+    #buscador {
+        width: 100%; /* El input ocupa todo el espacio del contenedor */
+    }
+    
+    /* Los títulos se hacen más pequeños para móviles */
+    #titulo, .bienvenida h1 {
+        font-size: 2rem; /* Reducir el tamaño del título principal */
+    }
+
+    /* Mostrar una sola columna para los libros */
+    .lista-libros {
+        grid-template-columns: 1fr; 
+    }
+    
+    /* Ocultar la navegación de género y mostrarla al inicio de la página */
+    .menu-navegacion {
+        display: none; /* Ocultamos la barra de navegación en móviles */
+    }
+}

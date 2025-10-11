@@ -1,0 +1,176 @@
+:root {
+  --color-fondo: #3B3535;
+  --color-acento: goldenrod;
+  --color-primario: #66D1ED;
+  --color-texto-claro: white;
+  --tamanio-fuente-titulo: 3rem;
+  --tamanio-fuente-subtitulo: 2rem;
+}
+
+body{
+    background-color: var(--color-fondo);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.topside {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    padding: 0 20px;
+}
+
+#titulo {
+    font-size: var(--tamanio-fuente-titulo);
+    color: var(--color-acento);
+}
+
+.buscador-contenedor {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#buscador {
+    width: 400px;
+    padding: 10px;
+    font-size: 16px;
+    background-color: var(--color-primario);
+    border: none;
+}
+
+.bienvenida {
+    text-align: center;
+    padding-top: 50px;
+}
+
+.bienvenida h1 {
+    font-size: var(--tamanio-fuente-titulo);
+    color: var(--color-texto-claro);
+}
+
+.menu-navegacion {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: #2e2a2a; 
+    border-bottom: 2px solid var(--color-acento);
+}
+
+.boton-navegacion {
+    background-color: transparent;
+    border: 2px solid var(--color-acento);
+    color: var(--color-acento);
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.boton-navegacion:hover {
+    background-color: var(--color-acento);
+    color: var(--color-fondo);
+}
+
+/* Estilos de las secciones de libros */
+.contenedor-libros {
+    padding: 20px;
+}
+
+.genero {
+    margin-bottom: 40px;
+}
+
+.titulo-genero {
+    font-size: var(--tamanio-fuente-subtitulo);
+    color: var(--color-acento);
+    border-bottom: 2px solid var(--color-acento);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.lista-libros {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+/* Para pantallas con un ancho de hasta 768px (tablets y móviles) */
+@media (max-width: 768px) {
+    .lista-libros {
+        /* Muestra 2 columnas */
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Para pantallas con un ancho de hasta 480px (móviles) */
+@media (max-width: 480px) {
+    .lista-libros {
+        /* Muestra 1 columna */
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+.libro-card {
+    background-color: #4A4444;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    color: var(--color-texto-claro);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.libro-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.libro-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.libro-card p {
+    font-size: 0.9rem;
+    color: #ccc;
+    margin-bottom: 10px;
+}
+
+.ver-pdf {
+    display: inline-block;
+    background-color: var(--color-acento);
+    color: var(--color-fondo);
+    padding: 8px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.ver-pdf:hover {
+    background-color: #e0ac00;
+}
+
+#agregar-libro {
+    display: block;
+    margin: 40px auto;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    background-color: var(--color-primario);
+    color: var(--color-fondo);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#agregar-libro:hover {
+    background-color: #49b5d6;
+}
