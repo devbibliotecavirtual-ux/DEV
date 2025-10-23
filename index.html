@@ -193,6 +193,44 @@
                 </div>
             </div>
         </main>
+    <!-- ¡AQUÍ VA EL BLOQUE DE SCRIPT MODULAR DE FIREBASE! -->
+    <script type="module">
+      // 1. Importa las funciones necesarias de los SDKs de Firebase
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/12.4.0/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.4.0/firebase-analytics.js";
+      // AÑADIMOS Firestore y Authentication
+      import { getFirestore } from "https://www.gstatic.com/firebasejs/12.4.0/firebase-firestore.js";
+      import { getAuth } from "https://www.gstatic.com/firebasejs/12.4.0/firebase-auth.js";
+
+
+      // 2. Tu objeto de configuración de Firebase (el que me proporcionaste)
+      const firebaseConfig = {
+        apiKey: "AIzaSyAWlnliQxBPgLisKMY4BIV26jWhQA00NCA",
+        authDomain: "dev-biblioteca-virtual.firebaseapp.com",
+        projectId: "dev-biblioteca-virtual",
+        storageBucket: "dev-biblioteca-virtual.firebasestorage.app",
+        messagingSenderId: "483281037989",
+        appId: "1:483281037989:web:5853b4d4ef10ade7753b4c",
+        measurementId: "G-EJ8YEMB6HD"
+      };
+
+      // 3. Inicializa Firebase y obtén las referencias a los servicios
+      const app = initializeApp(firebaseConfig);
+      const analytics = getAnalytics(app); // Referencia a Analytics
+
+      // AÑADIMOS la inicialización de Firestore y Authentication
+      const db = getFirestore(app);       // Referencia a Cloud Firestore
+      const auth = getAuth(app);         // Referencia a Firebase Authentication
+
+      // AHORA 'app', 'analytics', 'db' y 'auth' están disponibles
+      // y listos para ser usados en este mismo script o en otros módulos
+      // que importes después.
+
+      // Ejemplo:
+      console.log("Firebase inicializado correctamente.");
+      console.log("Proyecto ID:", firebaseConfig.projectId);
+
+    </script>
         <script src="script.js"></script>
     </body>
     </html>
