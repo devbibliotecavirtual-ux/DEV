@@ -11,6 +11,7 @@
     --color-exito-texto: #065F46; /* Verde oscuro para texto */
     --color-error-fondo: #FEE2E2; /* Rojo claro para error */
     --color-error-texto: #991B1B; /* Rojo oscuro para texto */
+    --color-logout: #D84343;
 }
         #body-index {
             font-family: 'Inter', sans-serif;
@@ -134,7 +135,16 @@
             color: var(--color-exito-texto);
             margin-bottom: 1rem;
         }
-
+        .qr-image {
+            width: 150px;
+            height: 150px;
+            max-width: 100%; /* <<-- ESTE ES EL ARREGLO CLAVE */
+            margin: 15px auto;
+            border: 1px solid #ddd;
+            display: block; /* Asegura que la imagen ocupe su propio espacio */
+            object-fit: contain;
+            border-radius: 4px;
+        }
 .success-message p {
 color: var(--color-texto-secundario);
 margin-bottom: 0;
@@ -165,7 +175,18 @@ html {
     font-size: var(--tamanio-fuente-titulo);
     color: var(--color-acento);
 }
-
+.btn-logout{
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border-radius: 6px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    background-color: var(--color-logout);
+    color: #ffffff; 
+}
 .buscador-contenedor {
     display: flex;
     align-items: center;

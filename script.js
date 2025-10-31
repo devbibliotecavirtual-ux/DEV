@@ -118,9 +118,7 @@ function handleLogin(event) {
                             Escanea este código para completar el pago de $10.000.
                         </p>
                         <!-- Código QR se muestra AHORA aquí -->
-                        <div class="qr-code-placeholder" style="margin: 10px 0 0 0;">
-                            [Código QR Aquí]
-                        </div>
+                        <img src="CodigoQR/nequi.PNG" class="qr-image">
                     </div>
                 `;
             } else {
@@ -138,3 +136,4 @@ function handleLogin(event) {
             detailsBox.innerHTML = content;
             detailsBox.style.display = 'block';
         }
+        onclick="window.location.href = 'index.html'"
