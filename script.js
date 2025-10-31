@@ -115,7 +115,7 @@ function handleLogin(event) {
                         <span class="nequi-logo-placeholder" style="font-size: 2.5rem; color: #E84562;">N</span>
                         <p style="font-weight: 700; color: #E84562; margin: 0;">¡Nequi Seleccionado!</p>
                         <p style="margin: 0; font-size: 0.85rem; color: var(--color-exito-texto);">
-                            Escanea este código para completar el pago de $10.000.
+                            Escanea este código desde tu aplicacion de pago para completar el pago de $10.000.
                         </p>
                         <!-- Código QR se muestra AHORA aquí -->
                         <img src="CodigoQR/nequi.PNG" class="qr-image">

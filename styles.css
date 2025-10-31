@@ -456,6 +456,11 @@ html {
             #login-card h2 {
                 font-size: 1.6rem;
             }
+            .btn-logout {
+                width: 60%; /* El botón ocupa más espacio horizontal */
+                padding: 15px 0; /* Un poco más de altura para el toque */
+                font-size: 1.1em;
+            }
         }
 
 
@@ -520,5 +525,11 @@ html {
             
             #login-card p {
                  margin-bottom: 1.5rem;
+            }
+            .btn-logout {
+                width: 85%; /* Mucho más ancho para facilitar el toque en móvil */
+                padding: 18px 0; /* Mayor altura, excelente objetivo táctil */
+                font-size: 1.2em;
+                box-shadow: 0 2px 4px rgba(0,0,0,0.2); /* Sombra más sutil en móvil */
             }
         }
