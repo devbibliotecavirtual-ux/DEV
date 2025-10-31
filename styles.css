@@ -422,11 +422,25 @@ html {
     #buscador {
         width: 250px; /* Reducir el ancho del input */
     }
-}
+            #body-index {
+                padding: 1rem 1.5rem; 
+            }
+            
+            /* Ligeramente menos padding en la tarjeta que en desktop */
+            #login-card {
+                padding: 35px; 
+            }
+
+            /* Los títulos pueden reducirse un poco */
+            #login-card h2 {
+                font-size: 1.6rem;
+            }
+        }
 
 
 /* 2. ESTILOS PARA TELÉFONOS MÓVILES (hasta 576px) */
 @media screen and (max-width: 576px) {
+    
     
     /* Encabezado: apilar el título y el buscador */
     .topside {
@@ -460,4 +474,30 @@ html {
     .menu-navegacion {
         display: none; /* Ocultamos la barra de navegación en móviles */
     }
-}
+
+            #body-index {
+                padding: 0;
+                /* Alinear al inicio, ya que la tarjeta ocupará todo el alto */
+                align-items: flex-start; 
+            }
+
+            /* Hacemos que la tarjeta ocupe toda la pantalla del móvil */
+            #login-card {
+                padding: 30px 20px; /* Reducir padding horizontal y vertical */
+                box-shadow: none; /* Eliminar sombra para un aspecto más nativo */
+                border-radius: 0; /* Bordes rectos */
+                max-width: 100%; 
+                width: 100%;
+                min-height: 100vh; /* Ocupar todo el alto visible */
+            }
+
+            /* Ajuste de tipografía principal */
+            #login-card h2 {
+                font-size: 1.4rem; /* Títulos más pequeños para móvil */
+                margin-bottom: 1rem;
+            }
+            
+            #login-card p {
+                 margin-bottom: 1.5rem;
+            }
+        }
